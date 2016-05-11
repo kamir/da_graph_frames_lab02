@@ -7,8 +7,8 @@ import org.graphframes._
 //
 // We start loading the raw data from a parquet file and register it as a temporary table 
 //
-val crawlDataFrame = sqlContext.read.parquet("./data/yarn_ds1_run_3_webpage_parquet_3/000000_0")
-crawlDataFrame.registerTempTable("yarn_ds1_run_3_webpage_parquet ")
+val crawlDataFrame = sqlContext.read.parquet("yarn_ds1_run_3_webpage_parquet_1k")
+crawlDataFrame.registerTempTable("yarn_ds1_run_3_webpage_parquet")
 
 //
 // Here we assume that we have a Hive table named yarn_ds1_run_3_webpage_parquet 

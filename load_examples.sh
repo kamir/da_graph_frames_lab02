@@ -16,8 +16,10 @@ hdfs dfs -put facebook_combined.txt
 # In our exercise we load the Parquet file via SQL-Context and register it as
 # a temporary table.
 #
-# NOTHIG TO DO HERE
+# First we upload it into HDFS
 #
+#
+hdfs dfs -put yarn_ds1_run_3_webpage_parquet_1k
 
 
 
