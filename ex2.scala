@@ -12,7 +12,9 @@ crawlDataFrame.registerTempTable("yarn_ds1_run_3_webpage_parquet")
 
 //
 // Here we assume that we have a Hive table named yarn_ds1_run_3_webpage_parquet 
-//
+// 
+//    *** FIX THE ORDER ***
+// 
 val e1 = sqlContext.sql("FROM yarn_ds1_run_3_webpage_parquet SELECT concat(mt,mp) as source, baseurl as target, '1' as type, explode(inlinks) as (mt,mp)")
 val e2 = sqlContext.sql("FROM yarn_ds1_run_3_webpage_parquet SELECT baseurl as source, concat(mt,mp) as target, '2' as type, explode(outlinks) as (mt,mp)")
 
