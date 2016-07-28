@@ -23,7 +23,6 @@ val k = g1.degrees.sort(desc("degree"))
 k.show()
 
 val pr2 = g1.pageRank.resetProbability(0.15).maxIter(10).run()
-pr2.persist()
 
 pr2.vertices.show()
 
