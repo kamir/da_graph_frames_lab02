@@ -1,0 +1,9 @@
+set size square
+set title '2D histo'
+set ylabel 'PageRank'
+set xlabel 'nr of triangles'
+set xrange[0:100]
+set yrange[0:1000]
+set pm3d map
+set palette defined (0 "white", 100 "blue", 250 "green", 600 "red")
+splot 'histogram.dat' notitle
