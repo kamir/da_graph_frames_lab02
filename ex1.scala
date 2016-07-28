@@ -19,11 +19,8 @@ val g1 = GraphFrame(nodes, edges)
 val k = g1.degrees.sort(desc("degree"))
 
 val pr2 = g1.pageRank.resetProbability(0.15).maxIter(10).run()
-<<<<<<< HEAD
-=======
-
-pr2.vertices.show()
->>>>>>> f7e39b7b1a2b68e482ba079262aa2f1a830fbed4
+ 
+pr2.vertices.show() 
 
 val pr3 = pr2.vertices.sort(desc("pagerank"))
 
@@ -36,8 +33,3 @@ val scatter = pr2.vertices.join(tcr, pr2.vertices.col("id").equalTo(tcr("id")))
 
 scatter.coalesce(1).write.format("com.databricks.spark.csv").option("header", "true").save("scatter_1.csv")
 
-
-<<<<<<< HEAD
-=======
-scatter.coalesce(1).write.format("com.databricks.spark.csv").option("header", "true").save("scatter_1.csv")
->>>>>>> f7e39b7b1a2b68e482ba079262aa2f1a830fbed4
