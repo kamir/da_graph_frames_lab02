@@ -32,7 +32,7 @@ nodes.limit(10).show()
 
 val e2 = eAll.withColumnRenamed("source","src").withColumnRenamed("target","dst")
 
-val g1 = GraphFrame(nodes, eAll)
+val g1 = GraphFrame(nodes, e2)
 
 val k = g1.degrees.sort(desc("degree"))
 k.show()
